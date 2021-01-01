@@ -1,0 +1,24 @@
+ <html>
+<body>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="w3-bar w3-white w3-wide w3-padding w3-card">
+ <a href="{{url_for('home')}}" class="w3-bar-item w3-button"><b>Sentiment</b> Analysis</a></b>
+</div>
+
+<div class="w3-container w3-padding-32" id="Search">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Search</h3>
+    <p>ANALYSE BY KEYWORD</p>
+    <form action="saction" method="GET" >
+     
+      <input class="w3-input w3-section w3-border" id="keyword" type="text"  placeholder="{{ ''.join(val) }}"
+       required name="keyword">
+      
+      <button class="w3-button w3-black w3-section" type="submit" >
+        <i class="fa fa-paper-plane"></i> SEARCH
+      </button>
+    </form>
+    <img src={{key}} alt=" " height="300" width="500" />
+  </div>
+
+</body>
+</html>

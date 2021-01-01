@@ -1,0 +1,38 @@
+ <html>
+<body>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+ <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+ <a href="{{url_for('home')}}" class="w3-bar-item w3-button"><b>Sentiment</b> Analysis</a></b>
+</div>
+<div class="w3-container w3-padding-32" id="compare">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">compare</h3>
+    <p>ENTER TWO BRANDS TO COMPARE</p>
+    <form action="/caction"  method="GET" >
+     
+      <input class="w3-input w3-section w3-border" type="text" id="keyword1" placeholder="{{ ''.join(val[0]) }}" required name="keyword1">
+      <input class="w3-input w3-section w3-border" type="text" id="keyword2" placeholder="{{ ''.join(val[1]) }}" required name="keyword2">
+      
+
+    <br>
+    <p>SELECT AREA:</p>
+  <div>
+  <select    name="city" id="cities">
+    <option value="" selected >INDIA</option>
+    <option value="gujarat" {% if place=='gujarat' %} selected {% endif %}>GUJARAT</option>
+    <option value="delhi" {% if place=='delhi' %} selected {% endif %}>DELHI</option>
+  </select>
+   </div>
+
+<br><br><br>
+
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> COMPARE
+      </button>
+    </form>
+  </div>
+<center><img src="{{key3}}"/></center>
+<img src="{{key2}}"/>
+<img src="{{key1}}"/>
+</body>
+</html>
